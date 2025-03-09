@@ -8,6 +8,9 @@ import cors from 'cors';
 import taskRoutes from './routes/task.routes.js';
 
 app.use(cors());
+app.use(cors({
+    origin: 'https://to-do-list-98zu.vercel.app/'
+  }));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
